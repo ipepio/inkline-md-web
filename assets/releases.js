@@ -9,8 +9,9 @@
  * es público.
  *
  * Los instaladores se sirven desde el CDN público del proyecto
- * (https://s3.ipepio.com/public/inkline/<versión>/…), no desde GitHub: el
- * repositorio de la app es privado y un visitante anónimo recibiría 404.
+ * (https://s3.ipepio.com/public/inkline/<versión>/…). Desde el 22/11/2026 el
+ * repositorio también es público, así que las URLs de la release de GitHub
+ * (…/releases/download/v<versión>/…) sirven como alternativa.
  */
 window.INKLINEMD_RELEASES = {
   repository: 'ipepio/inkline-md',

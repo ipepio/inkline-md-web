@@ -90,8 +90,11 @@ objeto sobrescrito:
 https://s3.ipepio.com/public/inkline/<versión>/<nombre-del-artefacto>
 ```
 
-El repo de la app es privado, de ahí que las descargas **no** apunten a
-`github.com/.../releases`: un visitante anónimo recibiría 404.
+Las descargas **no** apuntan a `github.com/.../releases`: el CDN desacopla la
+entrega del repo y permite servir binarios grandes sin gastar ancho de banda de
+GitHub. Desde el 22/11/2026 el repo `ipepio/inkline-md` es público y el código
+está bajo Apache-2.0, así que las URLs de la release funcionan igual como
+alternativa.
 
 La lectura anónima del bucket `public` es una política de bucket limitada al
 prefijo `inkline/*` (`s3:GetObject` para `arn:aws:s3:::public/inkline/*`). Nada
@@ -145,3 +148,8 @@ tiene negro, o blanco entero). `make-wordmark.swift` toma `inklineMD-text.png`
 —texto negro, «MD» lima— y convierte la tinta oscura en blanca conservando el
 lima, recortando al contenido. En la cabecera símbolo y logotipo se escalan por
 altura, así que no se recortan a ningún tamaño.
+
+## Licencia
+
+El código de la app (`ipepio/inkline-md`) es Apache-2.0. Este sitio comparte la
+misma licencia; la marca y el logotipo no están licenciados.

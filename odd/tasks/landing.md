@@ -162,3 +162,18 @@ MB), sha256 idéntico al artefacto de CI. Su `control` declara `Version: 0.2.0`,
 los 87 MB del AppImage (empaqueta ambas bibliotecas) frente a los 7,7 MB del
 paquete. La tarjeta de Linux muestra ahora dos botones —AppImage 87 MB y .deb 7,7
 MB— y una nota que explica la diferencia; `releases.js` ya usa `linux-deb`.
+
+L14 (licencia y repo público): el humano pide cambiar la licencia a Apache-2.0 y
+publicar el repositorio. Hecho en `md_viewer` (commit `647b2c0`, pusheado):
+`LICENSE` con el texto canónico de apache.org (202 líneas), `NOTICE` nuevo
+(copyright 2026 ipepio + avisos de terceros: Marked y PrismJS del mockup,
+modern-web-guidance Apache-2.0), `package.json` y `src-tauri/Cargo.toml` con
+`Apache-2.0`, README con la sección de licencia y la nota de que el nombre y el
+logo no se licencian. Antes de publicar se revisó el historial completo en busca
+de secretos, `.env` y claves: limpio; solo PNG de iconos. `gh repo edit … 
+--visibility public`: el repo pasa a público con descripción, homepage y temas.
+Verificado anónimamente: repo 200, assets de la release 200. En la landing se
+respetó el cambio del humano a CDN propio (`s3.ipepio.com`): solo se añadió el
+enlace al repo y la licencia, y se corrigió el comentario de `releases.js` que
+daba el repo por privado. El `.deb` descargado del CDN es byte a byte el de la
+release (mismo sha256).
