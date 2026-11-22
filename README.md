@@ -1,5 +1,7 @@
 # inklineMD — landing + demo
 
+[![Built with NaN](https://nan.builders/badge/built-with-nan-compact.svg)](https://nan.builders/?ref=built-with-nan)
+
 Sitio estático de la app **Inkline** (proyecto **inklineMD**): landing bilingüe
 (ES/EN) con la demo real del frontend dentro de un iframe. Sin framework, sin
 build y sin dependencias externas: solo HTML, CSS y un par de scripts.
