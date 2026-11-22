@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0c0f10">
+  <title>Inkline — Markdown Studio para escritorio</title>
+  <meta name="description" content="Inkline es un estudio de Markdown local-first para escritorio: visor, editor con vista previa en vivo, diagramas Mermaid y exportación a HTML, Markdown y Office. Pruébalo en la demo del navegador.">
+  <link rel="icon" type="image/png" href="./assets/app-icon.png">
+  <link rel="canonical" href="./index.html">
+  <link rel="alternate" hreflang="en" href="./en.html">
+  <link rel="preload" as="font" type="font/woff2" href="./assets/fonts/inter-latin.woff2" crossorigin>
+  <link rel="stylesheet" href="./assets/site.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Inkline — Markdown Studio para escritorio">
+  <meta property="og:description" content="Markdown sin ruido: vista previa en vivo, diagramas y exportación, en una app de escritorio local-first. Proyecto inklineMD.">
+  <meta property="og:image" content="./assets/app-icon.png">
+</head>
+<body>
+<a class="skip" href="#contenido">Ir al contenido</a>
+
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <a class="brand" href="./index.html" aria-label="inklineMD — inicio">
+      <img class="brand__mark" src="./assets/inkline-mark.png" alt="" width="272" height="263">
+      <img class="brand__word" src="./assets/wordmark.png" alt="inklineMD" width="757" height="122">
+    </a>
+    <div class="topbar__end">
+      <nav class="topnav" aria-label="Principal">
+        <a href="#funciones">Funciones</a>
+        <a href="#stack">Bajo el capó</a>
+        <a href="#descargas">Descargas</a>
+      </nav>
+      <div class="lang" role="group" aria-label="Idioma">
+        <a href="./index.html" aria-current="page" lang="es">ES</a><a href="./en.html" hreflang="en" lang="en">EN</a>
+      </div>
+      <a class="btn btn--outline" href="#demo">
+        Probar demo
+        <svg aria-hidden="true"><use href="./assets/icons.svg#i-arrow-right"></use></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow">El editor que despeja el camino</p>
+        <h1>Markdown.<br><span class="is-dim">Sin ruido.</span><br><span class="is-lime">Sin límites.</span></h1>
+        <p class="lede">
+          <strong>Inkline</strong> es un estudio de Markdown para el escritorio:
+          visor, editor y exportador en una sola ventana. Tus archivos se quedan en
+          tu equipo, y el documento se ve mientras lo escribes.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--lg" href="#demo">
+            Probar demo web
+            <svg aria-hidden="true"><use href="./assets/icons.svg#i-arrow-right"></use></svg>
+          </a>
+          <a class="btn btn--outline btn--lg" href="#descargas">
+            <svg aria-hidden="true"><use href="./assets/icons.svg#i-download"></use></svg>
+            Descargar para <span data-os-label data-label-macos="macOS" data-label-windows="Windows" data-label-linux="Linux" data-label-other="escritorio">escritorio</span>
+          </a>
+        </div>
+        <ul class="hero__checks">
+          <li>Local-first</li>
+          <li>Sin cuenta</li>
+          <li>Sin telemetría</li>
+        </ul>
+      </div>
+      <div class="hero__art" aria-hidden="true">
+        <span class="hero__pill">Focus mode · on</span>
+        <img class="hero__icon" src="./assets/app-icon.png" alt="" width="512" height="512">
+        <div class="hero__snippet">
+          <div><span>01</span># Tus ideas, en Markdown</div>
+          <div><span>02</span>Escribe. Organiza. Crea.</div>
+          <div><span>03</span><em>&#10003;</em> Sin distracciones_</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo" id="demo" aria-labelledby="demo-title">
+    <div class="wrap">
+      <h2 id="demo-title" class="sr-only">Demo interactiva de Inkline</h2>
+      <div class="frame">
+        <div class="frame__bar">
+          <span class="frame__dots" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="frame__title">Inkline — Markdown Studio</span>
+          <span class="frame__tag">demo en vivo</span>
+          <a class="frame__open" href="./app/index.html" target="_blank" rel="noopener">Abrir a pantalla completa ↗</a>
+        </div>
+        <div class="frame__body" data-fallback="La demo no está disponible en este momento. Compila el frontend con <code>pnpm build:demo</code> y copia el resultado en <code>app/</code>.">
+          <img class="frame__poster" src="./assets/demo-poster.png" alt="Captura de Inkline en modo dividido: el Markdown a la izquierda y la vista previa renderizada a la derecha" width="1400" height="860">
+          <iframe
+            title="Demo de Inkline: editor de Markdown con vista previa"
+            data-src="./app/index.html"
+            width="1400"
+            height="860"
+            loading="lazy"
+            referrerpolicy="no-referrer"></iframe>
+          <a class="frame__play btn btn--primary" href="./app/index.html">Abrir la demo</a>
+        </div>
+        <p class="frame__hint">
+          Es el frontend real de la app, sin backend de escritorio:
+          <a href="#notas">abrir y guardar archivos requiere Inkline</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="funciones" aria-labelledby="funciones-title">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="kicker">Funciones</p>
+        <h2 id="funciones-title">Lo justo para escribir, y nada que estorbe</h2>
+        <p class="section__lede">
+          Tres modos, un espacio de trabajo y la salida a papel o a HTML cuando
+          el documento está listo.
+        </p>
+      </div>
+      <ul class="features">
+        <li class="feature">
+          <span class="feature__icon"><svg aria-hidden="true"><use href="./assets/icons.svg#i-split"></use></svg></span>
+          <h3>Tres modos, un documento</h3>
+          <p>Lectura, edición y vista dividida con previsualización en vivo. El reparto del divisor se recuerda por documento.</p>
+        </li>
+        <li class="feature">
+          <span class="feature__icon"><svg aria-hidden="true"><use href="./assets/icons.svg#i-tree"></use></svg></span>
+          <h3>Espacio de trabajo</h3>
+          <p>Árbol de carpetas, recientes y pestañas. Cambiar de archivo no pierde ni el cursor ni la posición de lectura.</p>
+        </li>
+        <li class="feature">
+          <span class="feature__icon"><svg aria-hidden="true"><use href="./assets/icons.svg#i-command"></use></svg></span>
+          <h3>Paleta de comandos</h3>
+          <p>Un campo para todo con <code>⌘K</code>: saltar a un archivo, abrir uno reciente o ejecutar un comando.</p>
+        </li>
+        <li class="feature">
+          <span class="feature__icon"><svg aria-hidden="true"><use href="./assets/icons.svg#i-editor"></use></svg></span>
+          <h3>Editor CodeMirror 6</h3>
+          <p>Numeración de líneas, resaltado de Markdown, barra de formato, ajuste de línea y tamaño de fuente a tu gusto.</p>
+        </li>
+        <li class="feature">
+          <span class="feature__icon"><svg aria-hidden="true"><use href="./assets/icons.svg#i-preview"></use></svg></span>
+          <h3>Visor GitHub Flavored</h3>
+          <p>Tablas, listas de tareas y bloques de código con resaltado de Shiki. La lectura tiene ancho de línea de verdad.</p>
+        </li>
+        <li class="feature">
+          <span class="feature__icon"><svg aria-hidden="true"><use href="./assets/icons.svg#i-diagram"></use></svg></span>
+          <h3>Diagramas Mermaid</h3>
+          <p>Los bloques <code>mermaid</code> se renderizan dentro del documento, sin abrir otra herramienta ni salir del archivo.</p>
+        </li>
+        <li class="feature">
+          <span class="feature__icon"><svg aria-hidden="true"><use href="./assets/icons.svg#i-export"></use></svg></span>
+          <h3>Exportación</h3>
+          <p>HTML autónomo, copia en Markdown y formatos de Office (<code>.docx</code>, <code>.odt</code>). La impresión va por el navegador del sistema.</p>
+        </li>
+        <li class="feature">
+          <span class="feature__icon"><svg aria-hidden="true"><use href="./assets/icons.svg#i-sliders"></use></svg></span>
+          <h3>Ajustes que persisten</h3>
+          <p>Tema claro, oscuro o del sistema, tipografía serif opcional para leer y zoom global con <code>⌘+</code> / <code>⌘−</code>.</p>
+        </li>
+        <li class="feature">
+          <span class="feature__icon"><svg aria-hidden="true"><use href="./assets/icons.svg#i-lock"></use></svg></span>
+          <h3>Local-first de verdad</h3>
+          <p>Los archivos se escriben con <em>write-then-rename</em> y nunca salen de tu equipo: no hay cuenta ni servidor intermedio.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="stack" aria-labelledby="stack-title">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="kicker">Bajo el capó</p>
+        <h2 id="stack-title">Un binario nativo, no una pestaña más</h2>
+        <p class="section__lede">
+          La interfaz es web; la ventana, el disco y los diálogos del sistema son
+          nativos.
+        </p>
+      </div>
+      <div class="stack">
+        <table class="stack__table">
+          <caption>Repositorio del proyecto: <code>md_viewer</code> · licencia MIT.</caption>
+          <tbody>
+            <tr><th scope="row">Shell</th><td>Tauri 2 (Rust)</td></tr>
+            <tr><th scope="row">UI</th><td>React 18 + TypeScript</td></tr>
+            <tr><th scope="row">Build</th><td>Vite 6</td></tr>
+            <tr><th scope="row">Estilos</th><td>Tailwind CSS 4 + shadcn/ui</td></tr>
+            <tr><th scope="row">Editor</th><td>CodeMirror 6</td></tr>
+            <tr><th scope="row">Markdown</th><td>markdown-it (GFM) + Shiki + Mermaid</td></tr>
+          </tbody>
+        </table>
+        <div class="principles">
+          <div class="principle">
+            <h3>Escritura atómica</h3>
+            <p>Se escribe un temporal y se renombra: un corte de luz no deja el documento a medias.</p>
+          </div>
+          <div class="principle">
+            <h3>Sin red por defecto</h3>
+            <p>No hay sincronización ni telemetría. Lo que abres es tuyo y se queda donde está.</p>
+          </div>
+          <div class="principle">
+            <h3>Una sola ventana</h3>
+            <p>Visor, editor y exportador comparten el documento, la posición y el tema.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="descargas" aria-labelledby="descargas-title">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="kicker">Descargas</p>
+        <h2 id="descargas-title">Instaladores</h2>
+        <p class="section__lede">
+          Versión <strong>0.2.0</strong>. Binarios sin firmar: el sistema pedirá
+          confirmación la primera vez que los abras.
+        </p>
+      </div>
+      <ul class="downloads">
+        <li class="download" data-os="macos" data-release="macos-arm64">
+          <div class="download__head">
+            <h3>macOS</h3>
+            <span class="download__badge">Tu sistema</span>
+          </div>
+          <div class="download__meta">
+            <span><strong>Apple silicon</strong> (aarch64)</span>
+            <span>Formato: .dmg · 8,3 MB</span>
+          </div>
+          <a class="btn" href="https://s3.ipepio.com/public/inkline/0.2.0/Inkline_0.2.0_aarch64.dmg" data-release="macos-arm64" download>Descargar .dmg</a>
+        </li>
+        <li class="download" data-os="windows" data-release="windows-x64">
+          <div class="download__head">
+            <h3>Windows</h3>
+            <span class="download__badge">Tu sistema</span>
+          </div>
+          <div class="download__meta">
+            <span><strong>x64</strong> · instalador NSIS · 5,6 MB</span>
+            <span>Compilado en CI con cada push a <code>main</code></span>
+          </div>
+          <a class="btn" href="https://s3.ipepio.com/public/inkline/0.2.0/Inkline_0.2.0_x64-setup.exe" data-release="windows-x64" rel="noopener">Descargar .exe</a>
+        </li>
+        <li class="download" data-os="linux">
+          <div class="download__head">
+            <h3>Linux</h3>
+            <span class="download__badge">Tu sistema</span>
+          </div>
+          <div class="download__meta">
+            <span><strong>x86_64</strong> · paquete .deb · 7,7 MB</span>
+            <span>Debian, Ubuntu y derivadas · compilado en CI con cada push a <code>main</code></span>
+          </div>
+          <div class="download__actions">
+            <a class="btn" href="https://s3.ipepio.com/public/inkline/0.2.0/Inkline_0.2.0_amd64.deb" data-release="linux-deb" rel="noopener">Descargar .deb</a>
+          </div>
+        </li>
+      </ul>
+      <div class="downloads__note">
+        <p>Los instaladores de la versión <strong>0.2.0</strong> se sirven desde el CDN del proyecto.</p>
+        <p><strong>macOS Intel y Windows arm64</strong> todavía no tienen binario publicado.</p>
+        <p><strong>Linux</strong>: se distribuye como <code>.deb</code> (x86_64), que instala el paquete y usa el WebKit del sistema en Debian, Ubuntu y derivadas.</p>
+        <p><strong>Office (.docx / .odt)</strong> usa <code>textutil</code> de macOS: en otros sistemas la exportación disponible es HTML y Markdown.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="notas" aria-labelledby="notas-title">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="kicker">Antes de descargar</p>
+        <h2 id="notas-title">Preguntas cortas</h2>
+      </div>
+      <dl class="faq">
+        <div>
+          <dt>¿Qué es la demo de arriba?</dt>
+          <dd>El frontend real de la app compilado para el navegador. Escribe, cambia de modo y exporta HTML; abrir y guardar archivos locales necesita la versión de escritorio.</dd>
+        </div>
+        <div>
+          <dt>¿Dónde se guardan mis documentos?</dt>
+          <dd>Donde tú decidas. Inkline solo lee y escribe los archivos que abres, con escritura atómica y sin copias en la nube.</dd>
+        </div>
+        <div>
+          <dt>¿Por qué el sistema avisa al abrir el instalador?</dt>
+          <dd>Los binarios son de un proyecto independiente y no están firmados ni notarizados. Usa el flujo «abrir de todos modos» de macOS o «más información → ejecutar» en Windows.</dd>
+        </div>
+        <div>
+          <dt>¿Hay versión móvil o web?</dt>
+          <dd>No. Inkline es una app de escritorio: necesita acceso al sistema de archivos. La demo del navegador es una muestra del frontend, no un producto aparte.</dd>
+        </div>
+        <div>
+          <dt>¿Cómo se compila?</dt>
+          <dd>Con Node 22+, pnpm y Rust estable: <code>pnpm install</code> y luego <code>pnpm tauri dev</code>. El build de escritorio se empaqueta con <code>pnpm tauri build</code>.</dd>
+        </div>
+        <div>
+          <dt>¿Se puede usar el código?</dt>
+          <dd>Sí: licencia MIT. El proyecto se llama <strong>inklineMD</strong> y la app, <strong>Inkline</strong>.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <img class="footer__mark" src="./assets/inkline-mark.png" alt="inklineMD" width="272" height="263">
+      <p>inklineMD es el proyecto; Inkline, la app de escritorio. Hecho con Tauri, React y Vite. Licencia MIT.</p>
+    </div>
+    <div class="footer__side">
+      <nav class="footer__nav" aria-label="Pie de página">
+        <a href="#funciones">Funciones</a>
+        <a href="#descargas">Descargas</a>
+        <a href="#notas">Preguntas</a>
+        <a href="./app/index.html" target="_blank" rel="noopener">Demo a pantalla completa ↗</a>
+      </nav>
+      <div class="footer__lang">
+        <a href="./index.html" aria-current="page" lang="es">Español</a><a href="./en.html" hreflang="en" lang="en">English</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="./assets/releases.js"></script>
+<script src="./assets/site.js"></script>
+</body>
+</html>

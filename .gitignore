@@ -1,0 +1,10 @@
+.DS_Store
+
+# Instaladores locales: se sirven desde el CDN, no se versionan (~101 MB).
+Inkline_*.dmg
+Inkline_*.exe
+Inkline_*.AppImage
+Inkline_*.deb
+
+# Estado de herramientas locales.
+.atl/
