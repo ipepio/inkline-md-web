@@ -16,12 +16,12 @@
  */
 window.INKLINEMD_RELEASES = {
   repository: 'ipepio/inkline-md',
-  version: '0.3.0',
+  version: '0.3.1',
   downloads: {
-    'macos-arm64': 'https://s3.ipepio.com/public/inkline/0.3.0/Inkline_0.3.0_aarch64.dmg',
+    'macos-arm64': 'https://s3.ipepio.com/public/inkline/0.3.1/Inkline_0.3.1_aarch64.dmg',
     'macos-x64': null,
-    'windows-x64': 'https://s3.ipepio.com/public/inkline/0.3.0/Inkline_0.3.0_x64-setup.exe',
+    'windows-x64': 'https://s3.ipepio.com/public/inkline/0.3.1/Inkline_0.3.1_x64-setup.exe',
     'windows-arm64': null,
-    'linux-deb': 'https://s3.ipepio.com/public/inkline/0.3.0/Inkline_0.3.0_amd64.deb'
+    'linux-deb': 'https://s3.ipepio.com/public/inkline/0.3.1/Inkline_0.3.1_amd64.deb'
   }
 };
